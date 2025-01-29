@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Bebidas React TypeScript 🍹
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web para buscar y explorar recetas de bebidas y cócteles. Fue desarrollado como parte de mi aprendizaje en desarrollo web moderno.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas 🛠️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - Biblioteca principal para construir la interfaz de usuario
+- **TypeScript** - Añade tipado estático al código JavaScript
+- **Vite** - Herramienta de construcción y desarrollo rápido
+- **TailwindCSS** - Framework CSS para diseño responsive
+- **Zustand** - Manejo de estado global
+- **React Router DOM** - Navegación y enrutamiento
+- **Axios** - Cliente HTTP para realizar peticiones
+- **Zod** - Validación de esquemas
+- **HeadlessUI** - Componentes accesibles sin estilos
+- **HeroIcons** - Iconos SVG
 
-## Expanding the ESLint configuration
+## Lo que Aprendí 📚
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Implementación de TypeScript en un proyecto React
+- Gestión de estado global con Zustand
+- Validación de formularios y datos con Zod
+- Diseño de interfaces responsivas con TailwindCSS
+- Manejo de rutas y navegación con React Router
+- Integración con APIs externas usando Axios
+- Componentes accesibles con HeadlessUI
+- Mejores prácticas de desarrollo y arquitectura de aplicaciones
 
-- Configure the top-level `parserOptions` property like this:
+## Cómo Ejecutar el Proyecto 🚀
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clona el repositorio:
+```bash
+git clone [URL del repositorio]
+```
+2. Instala las dependencias:
+```bash
+cd bebidas-react-typescript
+npm install
+```
+3. Crea un archivo `.env` en la raíz del proyecto y añade las variables de entorno necesarias:
+```bash
+VITE_API_URL=tu_url_api
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
 ```
+
+
+5. Abre tu navegador en `http://localhost:5173`
+
+## Scripts Disponibles 📝
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run lint` - Ejecuta el linter
+- `npm run preview` - Previsualiza la versión de producción
